@@ -1,0 +1,151 @@
+body{
+  background-color: white;
+}
+
+.modal{
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-contenido{
+  background-color: #698cc0;
+  margin: 10% auto;
+  padding: 25px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.cerrar{
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.cerrar:hover,
+.cerrar:focus{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ESTO HACE QUE SE PONGAN UNO AL LADO DEL OTRO */
+.bolsos-H1 {
+  display: flex;          /* Los pone en fila */
+  flex-wrap: wrap;        /* Si no caben, bajan de línea */
+  justify-content: center;/* Los centra */
+  gap: 30px;              /* Espacio simétrico entre ellos */
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ESTILO DE CADA PRODUCTO */
+.img-info {
+  position: relative;
+  display: block;         /* Importante */
+  overflow: hidden;       /* Para que el zoom no se salga */
+  cursor: pointer;
+  width: 220px;           /* ANCHO FIJO PARA TODOS */
+}
+
+/* TAMAÑO DE LA IMAGEN */
+.img-info img {
+  width: 100%;           /* Ocupa todo el ancho del contenedor */
+  height: auto;          /* Mantiene proporción */
+  display: block;
+  transition: transform 0.3s ease; /* Suavidad del zoom */
+}
+
+/* EFECTO ZOOM AL PASAR EL MOUSE */
+.img-info:hover img {
+  transform: scale(1.05);
+}
+/* ESTILO DE LA BARRA */
+.barra-navegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4A6FA5; /* Color Dorado Elegante */
+  padding: 15px 30px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* BOTÓN INICIO */
+.boton-inicio {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 3px, solid, black;
+}
+
+.boton-inicio:hover {
+  background-color: #aaa;
+  transform: scale(1.05);
+}
+
+/* CAJA DEL BUSCADOR */
+.buscador {
+  display: flex;
+  gap: 10px;
+}
+
+.buscador input {
+  padding: 10px 15px;
+  width: 300px;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  outline: none;
+}
+
+.buscador button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  border: 3px, solid, black;
+}
+
+.buscador button:hover {
+  background-color: #aaa;
+}
+
+/* BOTÓN DE WHATSAPP */
+.boton-whatsapp {
+  display: inline-block;
+  background-color: white; /* Verde WhatsApp */
+  color: black;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: all 0.3s;
+  border: 3px, solid, black;
+}
+
+.boton-whatsapp:hover {
+  background-color: #aaa;
+  transform: scale(1.05);
+}

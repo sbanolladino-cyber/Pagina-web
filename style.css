@@ -1,0 +1,235 @@
+  /* INDEXHTML */
+*{
+  margin: 3,5%;
+}
+
+body{
+    background: #000000;
+    margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+   overflow-x: hidden; /* Quita la barra fea de abajo */
+}
+
+main {
+    flex: 1;
+}
+
+.fondo{
+  width: 100%;
+  height: 100%;
+  --s: 200px; /* control the size */
+  --c1: #1d1d1d;
+  --c2: #4e4f51;
+  --c3: #3c3c3c;
+
+  background: repeating-conic-gradient(
+        from 30deg,
+        #0000 0 120deg,
+        var(--c3) 0 180deg
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 180deg
+    );
+  background-size: var(--s) calc(var(--s) * 0.577);
+}
+
+header {
+  background: black;
+  color: white;
+  padding: 45px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+header h1{
+    margin: 0;
+}
+
+.h2{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.tex{
+  color: #484747;
+}
+
+.par{
+    color: black;
+}
+
+.container{
+    display: flex;
+}  
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;   
+}
+
+.apart-Hombre{
+
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+
+}
+
+.apart-Mujer{
+
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.apart-Niños{
+
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.apart-Niñas{
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  /*
+  width: 30%; */        
+  max-width: 420px;     /* Límite máximo de ancho */
+  min-width: 250px;     /* Límite mínimo para que no se encoja demasiado */
+}
+
+.apart-Niñas:hover{
+    transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.apart-Hombre:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.apart-Mujer:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.apart-Niños:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.btn{
+    display: inline-block;
+  margin-top: 15px;
+  padding: 10px 25px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.btn:hover{
+    background: #333;
+    transform: scale(1.05);
+}
+
+footer{
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  font-size: 20px;
+}
+
+.text{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* ============================================== */
+/* 📱💻 CÓDIGO PARA QUE SE ADAPTE A TODAS PANTALLAS */
+/* ============================================== */
+
+.container, .contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* 🖥️ PC: 3 por fila */
+.apart-Hombre, 
+.apart-Mujer, 
+.apart-Niños, 
+.apart-Niñas {
+  width: calc(33.333% - 20px) !important;
+  box-sizing: border-box;
+}
+
+/* 📱 TABLET: 2 por fila */
+@media (max-width: 992px) {
+  .apart-Hombre, 
+  .apart-Mujer, 
+  .apart-Niños, 
+  .apart-Niñas {
+    width: calc(50% - 15px) !important;
+  }
+}
+
+/* 📱 CELULAR: 2 por fila */
+@media (max-width: 768px) {
+  .container, .contenedor {
+    gap: 10px;
+    padding: 10px;
+    justify-content: space-between !important;
+  }
+
+  .apart-Hombre, 
+  .apart-Mujer, 
+  .apart-Niños, 
+  .apart-Niñas {
+    width: calc(50% - 8px) !important;
+  }
+
+  /* Achicar letras un poquito */
+  .tex {
+    font-size: 16px !important;
+  }
+  .par {
+    font-size: 12px !important;
+  }
+  .btn {
+    padding: 6px 15px !important;
+    font-size: 12px !important;
+  }
+}
+
+/* 📱 CELULAR MUY PEQUEÑO: 1 por fila */
+@media (max-width: 480px) {
+  .apart-Hombre, 
+  .apart-Mujer, 
+  .apart-Niños, 
+  .apart-Niñas {
+    width: 100% !important;
+  }
+}
